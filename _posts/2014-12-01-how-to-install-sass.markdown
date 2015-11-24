@@ -28,11 +28,11 @@ ruby 2.0.0p481
 
 + Open cmd.
 + type the following CLI to install SASS
-{% highlight shell %}
+{% highlight PowerShell %}
 gem install sass
 {% endhighlight %}
 + This should output :
-{% highlight shell %}
+{% highlight PowerShell %}
 Fetching: sass-3.4.2.gem (100%)
 Successfully installed sass-3.4.2
 Parsing documentation for sass-3.4.2
@@ -40,7 +40,7 @@ Installing ri documentation for sass-3.4.2
 1 gem installed
 {% endhighlight %}
 + Check if SASS installed :
-{% highlight shell %}
+{% highlight PowerShell %}
 sass -v
 Sass 3.4.2
 {% endhighlight %}
