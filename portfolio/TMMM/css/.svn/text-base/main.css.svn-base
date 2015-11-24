@@ -1,0 +1,630 @@
+
+body{
+	font-family: Tahoma, sans-serif;
+	color: #242424;
+	background-color: #64676c;
+    -webkit-font-smoothing:antialiased;
+	overflow: hidden;
+}
+.logo,.text{
+	opacity: 0;
+	position: absolute;
+	left: 44%;
+	top: 40%;
+}
+.text{
+	top: 54%;
+	font-size: 20px;
+	left: 40%;
+	background: #fff;
+	color: #099187;
+	padding: 2px 10px;
+}
+ul, menu, dir {
+	display: block;
+	list-style-type: disc;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 0px;
+	padding: 0;
+	margin: 0;
+}
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav>.active>a:focus{
+	background: transparent;
+	box-shadow: none;
+	padding: 0;
+	color: #fff;
+	text-shadow:none;
+}
+.navbar-default .navbar-nav > a:hover{
+	color: #fff;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+	border:none;
+}
+.navbar-default{
+	background: none;
+	border: none;
+	box-shadow: none;
+}
+.navbar-default .navbar-brand,.navbar-default .navbar-brand:hover{
+	color: #fff;
+	padding: 10px 25px;
+}
+.navbar-nav>li>a.add-task-icon,.navbar-nav>li>a.add-task-icon:hover{
+	color: #fff;
+	text-shadow:none;
+}
+header .form-control{
+	border-radius: 0;
+	box-shadow: none;
+	background: transparent;
+	border: 1px solid #444;
+	color: #fff;
+	font-weight: normal;
+	text-shadow:none;
+
+}
+header .form-control:focus{
+	border: 1px solid #222;
+	box-shadow: 0px 0px 5px rgba(0,0,0,.3);
+}
+button.topSearch,.topSearch.glyphicon:empty{
+	background: none;
+	color: #444;
+	border: none;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	margin-left: -35px;
+}
+.navbar-default .navbar-nav>li>a{
+	color: #fff;
+}
+.navbar-nav>li>a.dropdown-toggle.User{
+	padding: 10px 11px;
+	font-size: 12px;
+}
+.navbar-nav>li>a.dropdown-toggle.User:hover,
+.navbar-nav>li>a.dropdown-toggle.User:focus,
+.navbar-nav>li>a.dropdown-toggle.User:active{
+	color: #fff;
+}
+.navbar-default .navbar-nav>.dropdown>a .caret, 
+.navbar-default .navbar-nav>.dropdown>a:hover .caret,
+.navbar-default .navbar-nav>.dropdown>a:active .caret,
+.navbar-default .navbar-nav>.dropdown>a:focus .caret{
+	border-top-color: #777;
+	border-bottom-color: #777;
+}
+.nav>li>a>img{
+	max-width: 30px;
+	margin-right: 5px;
+}
+.navbar-default .navbar-nav>.dropdown.open>a{
+	background: none;
+}
+header .user-info{
+	overflow: hidden;
+	padding: 10px;
+	background: #fff;
+	box-shadow: 0px 3px 5px rgba(0,0,0,.15);
+}
+header .user-info .image{
+	float: left;
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+	border: 1px solid #bebebe;
+}
+header .user-info .image img{
+	width: 100%;
+}
+header .user-info .details{
+	margin-left: 70px;
+}
+.user-menu.dropdown-menu{
+	min-width: 250px;
+	background-color: #f2f2f2;
+	border-radius: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+header .user-info .details span{
+	display: block;
+}
+header .user-info .details a{
+	font-size: 12px;
+}
+.user-menu.dropdown-menu li.user-info a{
+	padding: 0;
+	color: #428bca;
+}
+.user-menu.dropdown-menu li.user-info a:hover{
+	background: none;
+	color: #428bca;
+	text-decoration: underline;
+}
+.user-menu.dropdown-menu li a{
+	padding: 7px 10px;
+	font-size: 12px;
+	color: #444;
+}
+.user-menu.dropdown-menu li{
+	border-bottom: 1px solid #bebebe;
+}
+.user-menu.dropdown-menu li a:hover{
+	background: none;
+}
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.open>a:hover, 
+.navbar-default .navbar-nav>.open>a:focus{
+	color: #fff;
+}
+.navbar-default .top-icons.navbar-nav>li>a:hover{
+	color: #bebebe;
+}
+.navbar-default .top-icons.navbar-nav{
+	margin: 0 auto;
+}
+.navbar-default .top-icons.navbar-nav>li>a,.navbar-default .top-icons.navbar-nav>li>a:hover{
+	padding: 15px;
+}
+.navbar-default .top-icons.navbar-nav>li>a:hover{
+	background: #383838;
+}
+.navbar-default .top-icons.navbar-nav>li.active>a{
+	background: #444;
+}
+.navbar-default .top-icons.navbar-nav>li>a.glyphicon:empty{
+	width: 44px;
+	top: 0;
+}
+.tooltip.bottom .tooltip-arrow{
+	border-bottom-color: rgba(0,0,0,.5);
+}
+.tooltip.right .tooltip-arrow{
+	border-right-color: rgba(0,0,0,.5);
+}
+.tooltip.left .tooltip-arrow{
+	border-left-color: rgba(0,0,0,.5);
+}
+.tooltip.top .tooltip-arrow{
+	border-top-color: rgba(0,0,0,.5);
+}
+.tooltip-inner{
+	background: rgba(0,0,0,.5);
+	border-radius: 0;
+	padding: 4px 10px;
+}
+.add-task-icon,{
+	color: #fff;
+	text-shadow:none;
+	font-weight: normal;
+	font-size: 15px;
+	text-decoration: none;
+	padding: 18px;
+}
+.navbar-default .top-icons.navbar-nav{
+	margin-left: 33%;
+}
+.user-menu.dropdown-menu li a:hover{
+	background: #444;
+	color: #fff;
+}
+.navbar{
+	margin-bottom: 0;
+	max-height: 50px;
+}
+.mainWrapper{
+	padding:0 10px;
+}
+.container1,.container2,.container3{
+	background: #fff;
+}
+.pane.ui-layout-center,.pane.ui-layout-west,.pane.ui-layout-east{
+	z-index: 30;
+}
+.pane.ui-layout-east{
+	z-index: -1 !important;
+}
+.pane{
+    display:  none; /* will appear when layout inits */
+}
+
+#container {
+    /* HEIGHT */
+    _height:  300px; /* min-height for IE6 */
+    /* WIDTH */
+    width:    100%;
+    _width:   700px; /* min-width for IE6 */
+    /* HORIZONTAL CENTERING */
+    margin:   0 auto;
+    }
+    /*
+    *  Container sizing
+    *
+    *  Borders and padding are normally *added* to the width/height of the DIV
+    *  However you can get height:100% AND padding/borders by using a nested layout. 
+    *  The outer-layout is just a single pane: center, which is where you add your vertical padding.
+    *  Inside this is your *real layout*. 
+    */
+.ui-layout-resizer{
+	background: transparent;
+}
+.right-section-container,
+.left-section-container,
+.center-section-container{
+	background: #fff;
+	box-shadow: 0px 0px 5px #000;
+	height: 100%;
+}
+.panel-group .panel{
+	border-radius: 0;
+}
+.panel-group .panel+.panel{
+	margin-top: 0;
+	box-shadow: none;
+}
+.panel-default{
+	border: none;
+	box-shadow: none;
+	border-radius: 0;
+	border-bottom: 1px dotted #ddd;
+}
+.toggle-bar.glyphicon:empty{
+	color: #fff;
+	padding: 12px;
+	top: 0;
+	width: 40px;
+	display: inline-block;
+}
+.toggle-bar.glyphicon:hover{
+	text-decoration: none;
+	background: #555;
+	transition:all .25s ease-in-out;
+}
+.animateLeft{
+	left: -500px !important;
+	transition:all .55s ease-in-out;
+}
+.footer-links{
+	list-style-type: none;
+	overflow: hidden;
+	float: right;
+}
+.footer-links li{
+	float: left;
+	margin-left: 15px;
+}
+.footer-links li a{
+	color: #eee;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 30px;
+	text-shadow:0px 1px 2px rgba(0,0,0,.8);
+}
+.footer-links li a:hover{
+	text-decoration: none;
+	color: #aaa;
+	transition:all .25s ease-in-out;
+	-webkit-transition:all .25s ease-in-out;
+	-moz-transition:all .25s ease-in-out;
+	-ms-transition:all .25s ease-in-out;
+}
+.footer-links li a i{
+	margin-right: 3px;
+}
+.copyRights{
+	color: #e1e1e1;
+	font-size: 11px;
+	line-height: 30px;
+}
+#paddingWrapper, #container{
+	overflow: visible !important;
+}
+.panel-default>.panel-heading{
+	background: #fff;
+}
+.panel-heading{
+	padding: 0;
+}
+.panel-title>a{
+	padding: 10px 15px;
+	display: block;
+	color: #428bca;
+	font-weight: normal;
+	background: #fff;
+}
+
+
+.panel-title>a:hover{
+	text-decoration: none;
+}
+.top-controllers{
+	margin-left: 30px;
+}
+.active-head-title{
+	padding: 5px 10px 0;
+	margin-bottom: 0;
+	font-size: 18px;
+	font-weight: normal;
+}
+.center-header{
+	padding: 15px;
+	padding-bottom: 2px;
+}
+.form-control{
+	border-radius: 0;
+	border:1px solid #d1d1d1;
+	box-shadow: none;
+	font-size: 12px;
+	font-weight: normal;
+}
+.form-control.main-search{
+	padding: 5px 10px;
+	height: 28px;
+	margin-top: 4px;
+}
+.main-search-form button.glyphicon:empty{
+	background: transparent;
+	border: none;
+	display: none;
+	width: 1.78em;
+	color: #bebebe;
+	font-weight: normal;
+	padding: 0;
+}
+
+.center-header .dropdown-menu>li>a{
+	font-size: 12px;
+}
+.center-header .form-group{
+	margin-bottom: 0;
+}
+.dropdown-menu{
+	border-radius: 0;
+}
+.center-header .dropdown-menu .divider{
+	margin: 3px 0;
+}
+.center-header .col-md-2 > div{
+	display: inline-block;
+}
+.center-header .col-md-2{
+	padding-left: 0;
+}
+.center-header .small-btn-n.glyphicon:empty{
+	border:1px solid #d1d1d1;
+	padding: 8px 5px;
+	margin-top: 4px;
+	width: 30px;
+	text-align: center;
+	margin-right: 14px;
+	color: #aaa;
+	top: 0;
+	font-size: 11px;
+	float: left;
+}
+.center-header .small-btn-n.glyphicon:empty:hover{
+	color: #428bca;
+	border: 1px solid #428bca;
+	transition:all .25s ease-in-out;
+}
+.center-header .small-btn-n.glyphicon:empty.active{
+	background: #e9eff5;
+	color: #428bca;
+	border:1px solid #d1d1d1;
+}
+.filters-top{
+	padding-left: 20px;
+}
+.filters-top span{
+	display: inline-block;
+	color: #428bca;
+	cursor: pointer;
+}
+.filters-top .itemName{
+	padding: 2px 4px 2px 4px;
+	float: left;
+	font-size: 12px;
+}
+.filters-top .itemDelete{
+	color: #aaa;
+	background: #d9ecf8;
+	padding: 2px 4px 2px 0px;
+	float: left;
+	visibility: hidden;
+	font-size: 12px;
+}
+.filters-top .itemDelete:hover{
+	color: #428bca;
+}
+.filters-top .itemCon{
+	border-radius: 3px;
+	overflow: hidden;
+}
+.filters-top .itemCon:hover .itemDelete{
+	visibility: visible;
+}
+.filters-top .itemCon:hover .itemName{
+	background: #d9ecf8;
+}
+.sort{
+	border-top: 1px solid #d1d1d1;
+	color: #504f4f;
+}
+.sort label,.sort a{
+	font-weight: normal;
+	font-size: 12px;
+}
+.list1-con .image img{
+	max-width: 30px;
+}
+.list1-con .image a{
+	float: left;
+	margin-left: 5px;
+	display: inline-block;
+	border: 1px solid #bebebe;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 1px 3px rgba(0,0,0,.15);
+}
+.list1-con li{
+	border-top: 1px solid #eee;
+	padding: 5px 0;
+	overflow: hidden;
+	min-height: 42px;
+	list-style-type: none;
+}
+.list1-con li:hover{
+	background: #eee;
+}
+.list1-con .task-title{
+	color: #2e2e2e;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 12px;
+}
+.list1-con .task-title:hover{
+	text-decoration: none;
+	color: #504f4f;
+
+}
+.list1-con .task-description{
+	font-size: 12px;
+	margin-bottom: 0;
+	color: #504f4f;
+}
+.list1-con .date{
+	font-size: 12px;
+	color: #504f4f;
+}
+.list1-con .add-task a{
+	color: #86888b;
+	font-size: 13px;
+}
+.list1-con .add-task a:hover{
+	text-decoration: none;
+}
+.list1-con .add-task a span{
+	margin-right: 5px;
+}
+.list1-con .add-task {
+	line-height: 42px;
+	padding-left: 30px;
+	border-bottom: 1px solid #ededed;
+}
+.list1-con .image input[type="checkbox"]{
+	position: absolute;
+	left: 4px;
+	visibility: hidden;
+}
+.list1-con li:hover .image input[type="checkbox"]{
+	visibility: visible;
+}
+.list1-con{
+	list-style-type: none;
+}
+.jspVerticalBar{
+	width: 6px;
+}
+.jspDrag{
+	background: #aaa;
+}
+.jspTrack{
+	background: #ccc;
+}
+.right-header{
+	border-bottom: 1px solid #d1d1d1;
+}
+.right-header .active-head-title{
+	padding:15px;
+}
+.filters-container li{
+	list-style-type: none;
+}
+.filters-container li label,.filters-container li a{
+	font-weight: normal;
+	margin-left: 3px;
+	font-size: 12px;
+}
+.filters-container li.others span{
+	color: #bebebe;
+}
+
+.check-btn *{
+	cursor: pointer;
+}
+.check-btn span{
+	display: inline-block;
+	border: 1px solid #d1d1d1;
+	width: 10px;
+	height: 10px;
+}
+.check-btn span.checked {
+	background: #428bca;
+	border: 2px solid #e1e1e1;
+}
+.check-btn input{
+	position: absolute;
+	margin: 0;
+	display: none;
+}
+.filters-container .panel-title>a{
+	color: #504f4f;
+	font-size: 12px;
+	padding-left: 5px;
+}
+.filters-container .panel-title>a:hover{
+	background: #eee;
+}
+.filters-container .panel-title>a i{
+	font-size: 7px;
+	font-weight: normal;
+	display: inline-block;
+	margin-right: 5px;
+	top: 0;
+}
+.filters-container .panel-title>a:hover{
+	color: #428bca;
+}
+.filters-container .panel-default>.panel-heading{
+	border:none;
+}
+.hide{
+	display: none;
+}
+.advanced-filters{
+	text-align: center;
+	padding: 20px 0;
+}
+.jspContainer,.jspScrollable,.jspPane{
+	width: 100% !important;
+}
+div:focus{
+	box-shadow: none;
+	border: none;
+}
+.center-header .dropdown-menu>li>a:hover{
+	background: none;
+}
+
+.inline-block{
+	display: inline-block;
+}
+
+
+@media (min-width: 768px){
+	.navbar-right .dropdown-menu {
+	right: 10px;
+	left: auto;
+	}
+	.navbar-collapse .navbar-nav.top-controllers.navbar-left:first-child{
+		margin-left: 0;
+	}
+}

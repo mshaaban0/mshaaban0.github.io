@@ -1,0 +1,218 @@
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!-- For Google -->
+    <link rel="author" href="https://plus.google.com/+MoeShaaban">
+    <link rel="publisher" href="https://plus.google.com/+MoeShaaban">
+    <!-- for Twitter -->          
+    <meta name="twitter:card" content="photo">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:url" content="">
+    <!-- for Facebook OpenGraph -->          
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="">
+
+    <title>Moe Shaaban - Front-end Engineer</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <!-- font Awesome CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <!-- Main Styles CSS -->
+    <link href="/assets/sass/main.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="reading">
+<header class="alt-header">
+
+    <div class="container">
+        <nav class="navbar dark-header" role="navigation">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="bars navbar-toggle collapsed" data-toggle="collapse" data-target="#mainMenu">
+                <span class="one"></span>
+                <span class="two"></span>
+                <span class="three"></span>
+              </button>
+              <a class="navbar-brand" href="/">Moe <span>Shaaban</span></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="mainMenu">
+
+              <ul class="nav navbar-nav navbar-right navbar-social">
+                <li><a href="https://twitter.com/mshaaban0" target="_blank"><span class="fa fa-twitter"></span></a></li>
+                <li><a href="https://github.com/mshaaban0" target="_blank"><span class="fa fa-github-alt" target="_blank"></span></a></li>
+              </ul>
+
+              <div class="pull-right mobile-nav-links clearfix">
+
+                <ul id="navScroll" class="nav navbar-nav navbar-right">
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/#aboutMe">About</a></li>
+                  <li><a href="/#Projects">Projects</a></li>
+                  <li><a href="/blog-archive.html">Blog</a></li>
+                  <li class="last"><a href="/#contacts">Contacts</a></li>
+                </ul>
+
+              </div>
+              <!-- #scrollNav -->
+              
+              
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+    <!-- /.container -->
+
+</header>
+<!-- /header -->
+
+
+
+<div class="container read-container">
+	
+	<div class="post">
+		<div class="page-header">
+			<h1 class="post-title">How To Install SASS on Windows - <small>Dec 1, 2014</small></h1>
+		</div>
+	    
+	    <p class="post-meta"></p>
+
+		<article class="post-content">
+			<p>SASS is a CSS processor that can make your life easier and faster than any other CSS processors, Installing SASS on windows actually very easy, and here is a little guide how to install it on windows.</p>
+
+<h3 id="what-to-install">What to install</h3>
+
+<ul>
+  <li>Install the latest version of Ruby find it here <a href="http://rubyinstaller.org/downloads/">Ruby Installer</a></li>
+</ul>
+
+<h3 id="installing-ruby">Installing Ruby</h3>
+
+<ol>
+  <li>Accept the licence then press NEXT
+<img src="/assets/media/sass-dec-2014-1.jpg" class="img-responsive" alt="" /></li>
+  <li>Make sure you check “Add Ruby excutables to your PATH”, This will add ruby to your cmd.
+<img src="/assets/media/sass-dec-2014-1.jpg" class="img-responsive" alt="" /></li>
+  <li>Press Install Then Finish.</li>
+  <li>Check if ruby installed correctly, type :</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell">ruby -v  #this should output something like the below
+ruby 2.0.0p481</code></pre></figure>
+
+<h3 id="installing-sass-with-gem-">Installing SASS With Gem :</h3>
+
+<ul>
+  <li>Open cmd.</li>
+  <li>type the following CLI to install SASS</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">gem install sass</code></pre></figure>
+
+<ul>
+  <li>This should output :</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">Fetching: sass-3.4.2.gem (100%)
+Successfully installed sass-3.4.2
+Parsing documentation for sass-3.4.2
+Installing ri documentation for sass-3.4.2
+1 gem installed</code></pre></figure>
+
+<ul>
+  <li>Check if SASS installed :</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">sass -v
+Sass 3.4.2</code></pre></figure>
+
+<p>That should do it, now put sass into action and run it.</p>
+
+<ul>
+  <li>Navigate to your sass folder</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell">cd /PATH/TO/SASS-FOLDER --watch style.scss:style.css</code></pre></figure>
+
+<p>Boom now it’s up and running.</p>
+
+
+		</article>
+	</div>
+	<!-- /.post -->
+
+</div>
+
+<div class="container">
+    <footer class="footer-alt">
+        
+        <div class="pull-left">
+            All Copyrights Reserved To Moe Shaaban - 2014
+        </div>
+        <div class="pull-right">
+            <ul class="list-inline">
+                <li>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-github-alt"></i></a>
+                </li>
+            </ul>
+        </div>
+        
+    </footer>
+</div>
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+<script src="/assets/js/sine-waves.min.js"></script>
+
+<script src="/assets/js/one.nav.js"></script>
+
+<!-- Custom JavaScript -->
+<script src="/assets/js/custom.js"></script>
+
+<script>
+    $(document).ready(function() {
+        appMaster.commonPlayground();
+        
+		
+        
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
+

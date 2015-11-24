@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TMMM</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="">
+    <!--This defines the description of the page that appears under the title on google-->
+    <meta http-equiv="pics-Label" content="" />
+    <!-- This defines the url for the picture we want to appear in googe maily the logo -->
+    <meta name="ROBOTS" content="" />
+    <!--This is instead of keywords, google stoped listening to key words and made this instead of it-->
+    <meta property="og:title" content="MicroSasS Web solutions" />
+    <!-- This is the topic main title which is very important too -->
+    <meta property="og:type" content="Technology"/>
+    <!--This one is very important too contains the type of the content "Food, fashion, Lifestyle,..etc"  -->
+    <meta property="og:url" content="http://microsass.com/aboutus.html"></meta>
+    <!-- Defines the url for the page -->
+    <meta property="og:image" content="http://images.media-allrecipes.com/userphotos/250x250/00/25/41/254186.jpg"></meta>
+    <!--This one defines the url for the image -->
+    <meta property="og:site_name" content="Microsass.com"></meta>
+    <!--Defines the site name for google which is microsass.com-->
+    <link rel="canonical" href="http://allrecipes.com/recipe/banana-banana-bread/" />
+    <!--This one is important, it's something like breadcrumb it tells google the category of the product in which section-->
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css">
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/select2.css">
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/jquery.layout-latest.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/select2.min.js"></script>
+	<script type="text/javascript" src="js/select2customized.js"></script>
+    
+    <script type="text/javascript" src="js/common.js"></script>
+    
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#"><img src="img/logo.png" /></a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+  <ul class="nav navbar-nav navbar-left top-icons top-controllers">
+      <li><a href="#" class="add-task-icon glyphicon glyphicon-plus has-tooltip" data-original-title="AddTask" data-placement="bottom" ></a></li>
+      <li><a href="#" class="add-task-icon toggle-bar glyphicon glyphicon-th-list has-tooltip" data-placement="bottom" title="" data-original-title="Show/Hide"></a></li>
+  </ul>
+
+    <ul class="nav navbar-nav top-icons">
+      <li class="active">
+        <a href="#" class="nav-list glyphicon glyphicon-list has-tooltip" data-placement="bottom" title="" data-original-title="ListView"></a>
+      </li>
+      <li>
+        <a href="#" class="nav-activity glyphicon glyphicon-comment has-tooltip" data-placement="bottom" title="" data-original-title="ActivityStream"></a>
+      </li>
+      <li>
+        <a href="#" class="nav-time glyphicon glyphicon-time has-tooltip" data-placement="bottom" title="" data-original-title="TimeLog"></a>
+      </li>
+      <li>
+        <a href="#" class="nav-timeLine glyphicon glyphicon-dashboard has-tooltip" data-placement="bottom" title="" data-original-title="TimeLine"></a>
+      </li>
+      <li>
+        <a href="#" class="nav-table glyphicon glyphicon-list-alt has-tooltip" data-placement="bottom" title="" data-original-title="Table"></a>
+      </li>
+      <li>
+        <a href="#" class="nav-work glyphicon glyphicon-user has-tooltip" data-placement="bottom" title="" data-original-title="Workload"></a>
+      </li>
+    </ul>
+    <!--
+        <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <button type="submit" class="topSearch glyphicon glyphicon-search"></button>
+    </form>
+    -->
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle User " data-toggle="dropdown"><img src="img/avatar.png"/>Ed Momani<b class="caret"></b></a>
+        <ul class="dropdown-menu user-menu">
+          <li class="user-info">
+              <div class="image">
+                <img src="img/avatar.png" />
+              </div>
+              <div class="details">
+              <span>Ed Momani</span>
+              <a href="#">View profile</a>
+              </div>
+          </li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+</header>
+
+<section class="mainWrapper">
+    <div id="container">
+    <div id="paddingWrapper" class="pane ui-layout-center">
+
+
+
+      <div class="pane ui-layout-center">
+        <div class="center-section-container">
+        <div class="center-header">
+          <div class="row">
+            <div class="col-md-3">
+              <label class="active-head-title">Welcome Quest</label>
+            </div>
+            
+            <div class="col-md-7">
+              <form role="form" class="main-search-form">
+                <div class="form-group">
+                  <input type="text" class="form-control main-search" id="exampleInputEmail1" placeholder="Search">
+                  <button type="submit" value="" class="glyphicon glyphicon-remove"></button>
+                  <button type="reset" value="" class="glyphicon glyphicon-search"></button>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-2">
+              <span class="filter-control glyphicon glyphicon-filter small-btn-n active"></span>
+              <div class="dropdown">
+                <span class="glyphicon glyphicon-list small-btn-n" id="dropMenu" data-toggle="dropdown"></span>
+                <ul class="dropdown-menu" aria-labelledby="dropMenu" role="menu">
+                  <li><a href="#" role="menuitem">Add to Dashboard</a></li>
+                  <li><a href="#" role="menuitem">Import</a></li>
+                  <li><a href="#" role="menuitem">Export</a></li>
+                  <li><a href="#" role="menuitem">Print</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" role="menuitem">Add to Dashboard</a></li>
+                </ul>
+              </div><!--End of dropdown-->
+            </div>
+            
+          </div><!--End of Row-->
+          <div class="row">
+            <div class="col-md-12 filters-top">
+				<div class="selected-task-status inline-block">
+					<span data-filter-value="active" data-return-container="[data-id='task-status-holder']" class="itemCon">
+						<span class="itemName">active</span>
+						<span class="itemDelete">x</span>
+					</span><!--itemCon-->
+				</div>
+
+				<div class="selected-assigned-to inline-block">
+					<span data-filter-value="all" data-return-container="[data-id='task-assigned-holder']" class="itemCon">
+						<span class="itemName">to: all</span>
+						<span class="itemDelete">x</span>
+					</span><!--itemCon-->
+				</div>
+				
+
+            </div>
+          </div><!--End of Row-->
+        </div><!--End of CenterHeader-->
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="sort">
+              <div class="col-md-offset-10">
+                <label>Sort by</label>
+                <a href="#">Priority</a>
+              </div>
+            </div><!--End of sort-->
+          </div>
+        </div><!--End of Row-->
+
+        <div class="row">
+          <div class="col-md-12 list-center-container">
+            <div class="list1-con">
+              <ul>
+
+
+                <li>
+                  <div class="image col-md-1">
+                    <input title="Select" class="has-tool-tip" type="checkbox">
+                    <a href="#">
+                      <img src="img/avatar.png" />
+                    </a>
+                  </div><!--image-->
+                  <div class="info col-md-10">
+                    <a href="#" class="task-title">This is a task's title, Mohammed.</a>
+                    <p class="task-description">Please add the tmmmm project to the repository, and keep the hidden fee available to all users</p>
+                  </div><!--Info-->
+                  <div class="date col-md-1">
+                    <span>3 Dec</span>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="image col-md-1">
+                    <input type="checkbox">
+                    <a href="#">
+                      <img src="img/avatar.png" />
+                    </a>
+                  </div><!--image-->
+                  <div class="info col-md-10">
+                    <a href="#" class="task-title">This is a task's title, Mohammed.</a>
+                    <p class="task-description">Please add the tmmmm project to the repository, and keep the hidden fee available to all users</p>
+                  </div><!--Info-->
+                  <div class="date col-md-1">
+                    <span>3 Dec</span>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="image col-md-1">
+                    <input type="checkbox">
+                    <a href="#">
+                      <img src="img/avatar.png" />
+                    </a>
+                  </div><!--image-->
+                  <div class="info col-md-10">
+                    <a href="#" class="task-title">This is a task's title, Mohammed.</a>
+                    <p class="task-description">Please add the tmmmm project to the repository, and keep the hidden fee available to all users</p>
+                  </div><!--Info-->
+                  <div class="date col-md-1">
+                    <span>3 Dec</span>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="image col-md-1">
+                    <input type="checkbox">
+                    <a href="#">
+                      <img src="img/avatar.png" />
+                    </a>
+                  </div><!--image-->
+                  <div class="info col-md-10">
+                    <a href="#" class="task-title">This is a task's title, Mohammed.</a>
+                    <p class="task-description">Please add the tmmmm project to the repository, and keep the hidden fee available to all users</p>
+                  </div><!--Info-->
+                  <div class="date col-md-1">
+                    <span>3 Dec</span>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="image col-md-1">
+                    <input type="checkbox">
+                    <a href="#">
+                      <img src="img/avatar.png" />
+                    </a>
+                  </div><!--image-->
+                  <div class="info col-md-10">
+                    <a href="#" class="task-title">This is a task's title, Mohammed.</a>
+                    <p class="task-description">Please add the tmmmm project to the repository, and keep the hidden fee available to all users</p>
+                  </div><!--Info-->
+                  <div class="date col-md-1">
+                    <span>3 Dec</span>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="image col-md-1">
+                    <input type="checkbox">
+                    <a href="#">
+                      <img src="img/avatar.png" />
+                    </a>
+                  </div><!--image-->
+                  <div class="info col-md-10">
+                    <a href="#" class="task-title">This is a task's title, Mohammed.</a>
+                    <p class="task-description">Please add the tmmmm project to the repository, and keep the hidden fee available to all users</p>
+                  </div><!--Info-->
+                  <div class="date col-md-1">
+                    <span>3 Dec</span>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="image col-md-1">
+                    <input type="checkbox">
+                    <a href="#">
+                      <img src="img/avatar.png" />
+                    </a>
+                  </div><!--image-->
+                  <div class="info col-md-10">
+                    <a href="#" class="task-title">This is a task's title, Mohammed.</a>
+                    <p class="task-description">Please add the tmmmm project to the repository, and keep the hidden fee available to all users</p>
+                  </div><!--Info-->
+                  <div class="date col-md-1">
+                    <span>3 Dec</span>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="image col-md-1">
+                    <input type="checkbox">
+                    <a href="#">
+                      <img src="img/avatar.png" />
+                    </a>
+                  </div><!--image-->
+                  <div class="info col-md-10">
+                    <a href="#" class="task-title">This is a task's title, Mohammed.</a>
+                    <p class="task-description">Please add the tmmmm project to the repository, and keep the hidden fee available to all users</p>
+                  </div><!--Info-->
+                  <div class="date col-md-1">
+                    <span>3 Dec</span>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="image col-md-1">
+                    <input type="checkbox">
+                    <a href="#">
+                      <img src="img/avatar.png" />
+                    </a>
+                  </div><!--image-->
+                  <div class="info col-md-10">
+                    <a href="#" class="task-title">This is a task's title, Mohammed.</a>
+                    <p class="task-description">Please add the tmmmm project to the repository, and keep the hidden fee available to all users</p>
+                  </div><!--Info-->
+                  <div class="date col-md-1">
+                    <span>3 Dec</span>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="image col-md-1">
+                    <input type="checkbox">
+                    <a href="#">
+                      <img src="img/avatar.png" />
+                    </a>
+                  </div><!--image-->
+                  <div class="info col-md-10">
+                    <a href="#" class="task-title">This is a task's title, Mohammed.</a>
+                    <p class="task-description">Please add the tmmmm project to the repository, and keep the hidden fee available to all users</p>
+                  </div><!--Info-->
+                  <div class="date col-md-1">
+                    <span>3 Dec</span>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="image col-md-1">
+                    <input type="checkbox">
+                    <a href="#">
+                      <img src="img/avatar.png" />
+                    </a>
+                  </div><!--image-->
+                  <div class="info col-md-10">
+                    <a href="#" class="task-title">This is a task's title, Mohammed.</a>
+                    <p class="task-description">Please add the tmmmm project to the repository, and keep the hidden fee available to all users</p>
+                  </div><!--Info-->
+                  <div class="date col-md-1">
+                    <span>3 Dec</span>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="image col-md-1">
+                    <input type="checkbox">
+                    <a href="#">
+                      <img src="img/avatar.png" />
+                    </a>
+                  </div><!--image-->
+                  <div class="info col-md-10">
+                    <a href="#" class="task-title">This is a task's title, Mohammed.</a>
+                    <p class="task-description">Please add the tmmmm project to the repository, and keep the hidden fee available to all users</p>
+                  </div><!--Info-->
+                  <div class="date col-md-1">
+                    <span>3 Dec</span>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="image col-md-1">
+                    <input type="checkbox">
+                    <a href="#">
+                      <img src="img/avatar.png" />
+                    </a>
+                  </div><!--image-->
+                  <div class="info col-md-10">
+                    <a href="#" class="task-title">This is a task's title, Mohammed.</a>
+                    <p class="task-description">Please add the tmmmm project to the repository, and keep the hidden fee available to all users</p>
+                  </div><!--Info-->
+                  <div class="date col-md-1">
+                    <span>3 Dec</span>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="image col-md-1">
+                    <input type="checkbox">
+                    <a href="#">
+                      <img src="img/avatar.png" />
+                    </a>
+                  </div><!--image-->
+                  <div class="info col-md-10">
+                    <a href="#" class="task-title">This is a task's title, Mohammed.</a>
+                    <p class="task-description">Please add the tmmmm project to the repository, and keep the hidden fee available to all users</p>
+                  </div><!--Info-->
+                  <div class="date col-md-1">
+                    <span>3 Dec</span>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="image col-md-1">
+                    <input type="checkbox">
+                    <a href="#">
+                      <img src="img/avatar.png" />
+                    </a>
+                  </div><!--image-->
+                  <div class="info col-md-10">
+                    <a href="#" class="task-title">This is a task's title, Mohammed.</a>
+                    <p class="task-description">Please add the tmmmm project to the repository, and keep the hidden fee available to all users</p>
+                  </div><!--Info-->
+                  <div class="date col-md-1">
+                    <span>3 Dec</span>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="image col-md-1">
+                    <input type="checkbox">
+                    <a href="#">
+                      <img src="img/avatar.png" />
+                    </a>
+                  </div><!--image-->
+                  <div class="info col-md-10">
+                    <a href="#" class="task-title">This is a task's title, Mohammed.</a>
+                    <p class="task-description">Please add the tmmmm project to the repository, and keep the hidden fee available to all users</p>
+                  </div><!--Info-->
+                  <div class="date col-md-1">
+                    <span>3 Dec</span>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="image col-md-1">
+                    <input type="checkbox">
+                    <a href="#">
+                      <img src="img/avatar.png" />
+                    </a>
+                  </div><!--image-->
+                  <div class="info col-md-10">
+                    <a href="#" class="task-title">This is a task's title, Mohammed.</a>
+                    <p class="task-description">Please add the tmmmm project to the repository, and keep the hidden fee available to all users</p>
+                  </div><!--Info-->
+                  <div class="date col-md-1">
+                    <span>3 Dec</span>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="image col-md-1">
+                    <input type="checkbox">
+                    <a href="#">
+                      <img src="img/avatar.png" />
+                    </a>
+                  </div><!--image-->
+                  <div class="info col-md-10">
+                    <a href="#" class="task-title">This is a task's title, Mohammed.</a>
+                    <p class="task-description">Please add the tmmmm project to the repository, and keep the hidden fee available to all users</p>
+                  </div><!--Info-->
+                  <div class="date col-md-1">
+                    <span>3 Dec</span>
+                  </div>
+                </li>
+
+                <li class="add-task">
+                    <a href="#"><span>+</span>New task</a>
+                </li>
+              </ul>
+            </div><!--End of list1-con-->
+          </div><!--End of col-md-12-->
+        </div><!--End of Row-->
+
+        </div><!--center-section-container-->
+      </div><!--End of Center-->
+
+
+
+    <div class="pane ui-layout-east">
+      <div class="left-section-container">
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="right-header">
+              <label class="active-head-title">Filters</label>
+            </div>
+          </div><!--End of col-md-12-->
+        </div><!--End of Row-->
+        <div class="row">
+          <div class="col-md-12">
+            
+            <div class="filters-container">
+                <div class="panel-group" id="filterAcc">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#filterAcc" href="#filterOne">
+          <i class="glyphicon glyphicon-chevron-right"></i>Status
+        </a>
+      </h4>
+    </div>
+    <div id="filterOne" class="panel-collapse filterCollapse">
+      <div class="panel-body">
+        <div class="filter-box">		
+          <ul class="task-status-holder" data-filter-target=".selected-task-status" data-id="task-status-holder">
+            <li class="check-btn">
+              <span class="checked">
+				<input type="checkbox" name="status" value="active" checked="checked">
+              </span>
+              <label>active</label>
+            </li>
+            <li class="check-btn">
+              <span class="check-btn">
+				<input type="checkbox" name="status" value="deffered">
+			  </span>
+              <label>deffered</label>
+            </li>
+            <li class="check-btn">
+              <span>
+				<input type="checkbox" name="status" value="cancelled">
+			  </span>
+              <label>cancelled</label>
+            </li>
+            <li class="check-btn">
+              <span>
+				<input type="checkbox" name="status" value="completed">
+			  </span>
+              <label>completed</label>
+            </li>
+          </ul>
+        </div><!--End of filter-box-->
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#filterAcc" href="#filterTwo">
+          <i class="glyphicon glyphicon-chevron-right"></i>Assigned
+        </a>
+      </h4>
+    </div>
+    <div id="filterTwo" class="panel-collapse filterCollapse in">
+      <div class="panel-body">
+        <div class="filter-box">
+          <ul data-filter-target=".selected-assigned-to" data-id="task-assigned-holder">
+            <li class="check-btn">
+              <span class="checked">
+				<input type="checkbox" name="assigned" value="me" checked="checked">
+              </span>
+              <label>Me</label>
+            </li>
+            <li class="check-btn">
+              <span>
+				<input type="checkbox" name="assigned" value="saed">
+              </span>
+              <label>Saed Test</label>
+            </li>
+            <li class="check-btn">
+              <span>
+				<input type="checkbox" name="assigned" value="laith">
+              </span>
+              <label>Laith Dolat</label>
+            </li>
+            <li class="check-btn">
+              <span>
+				<input type="checkbox" name="assigned" value="anas">
+              </span>
+              <label>Anas Qutishat</label>
+            </li>
+            <li class="others">
+				<div class="auto-complete auto-1" style="display: inline;">
+					<div class="selections"></div>
+					<span class="add-item" style="font-size: 18px; height: 30px;">+ <a href="#">Others</a></span>
+					<div class="options-container">
+							<select class="options-list1 auto-complete-options">
+								<option value="b">WyomingWyoming</option>
+								<option value="c">SamiSami</option>
+								<option value="d">AliAli</option>
+								<option value="e">LoloLolo</option>
+								<option value="f">Hoho</option>
+								<option value="h">Dodo</option>
+								<option value="i">Zozo</option>
+							</select>
+					</div>
+				</div>
+            </li>
+			<li class="check-btn">
+              <span>
+				<input type="checkbox" name="assigned" value="unassigned">
+              </span>
+              <label>Unassgined</label>
+            </li>
+          </ul>
+        </div><!--End of filter-box-->
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#filterAcc" href="#filterThree">
+          <i class="glyphicon glyphicon-chevron-right"></i>Task To Do
+        </a>
+      </h4>
+    </div>
+    <div id="filterThree" class="panel-collapse filterCollapse in">
+      <div class="panel-body">
+        <div class="filter-box">
+          <ul>
+            <li>
+              <span class="check-btn checked">
+              </span>
+              <label>overdue</label>
+            </li>
+            <li>
+              <span class="check-btn"></span>
+              <label>today</label>
+            </li>
+            <li>
+              <span class="check-btn"></span>
+              <label>this week</label>
+            </li>
+            <li>
+              <span class="check-btn"></span>
+              <label>this month</label>
+            </li>
+
+            <li>
+              <span class="check-btn"></span>
+              <label>time frame</label>
+            </li>
+
+          </ul>
+        </div><!--End of filter-box-->
+      </div>
+    </div>
+  </div>
+                </div><!--End of panel-group-->
+
+                <div class="advanced-filters">
+                  <button class="btn-default btn pop-this-over" data-toggle="popover" data-placement="top">Advanced filters</button>
+
+                  <div class="popover-head hide" >Advanced Options</div>
+                  <div class="popover-content hide" >
+                    <div class="filter-box">
+          <ul>
+            <li>
+              <span class="check-btn checked">
+              </span>
+              <label>overdue</label>
+            </li>
+            <li>
+              <span class="check-btn"></span>
+              <label>today</label>
+            </li>
+            <li>
+              <span class="check-btn"></span>
+              <label>this week</label>
+            </li>
+            <li>
+              <span class="check-btn"></span>
+              <label>this month</label>
+            </li>
+
+            <li>
+              <span class="check-btn"></span>
+              <label>time frame</label>
+            </li>
+
+          </ul>
+        </div><!--End of filter-box-->
+                  </div>
+
+                </div><!--Advanced Filters-->
+
+            </div><!--End of filters-container-->
+
+
+
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div> <!--End of East-->
+
+
+
+
+    <div class="pane ui-layout-west">
+      <div class="right-section-container">
+
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                  Dashboard
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse ">
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                  Folders
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                  Reports
+                </a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                  Welcome Quest
+                </a>
+              </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse">
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!--End of right-section-container-->
+    </div><!--End of west container-->
+
+
+  </div><!--End of #paddingWrapper-->
+</div><!--End of #container-->
+
+
+</section>
+
+<footer>
+  <div class="col-md-6">
+    <span class="copyRights">Copyright ©2006-2013 TMMM, Inc. All rights reserved. Patented.</span>
+  </div>
+  <div class="col-md-6">
+    <ul class="footer-links">
+      <li>
+        <a href="#"><i class="glyphicon glyphicon-bullhorn"></i>Feedback</a>
+      </li>
+      <li>
+        <a href="#"><i class="glyphicon glyphicon-share"></i>Spread the word</a>
+      </li>
+      <li>
+        <a href="#"><i class="glyphicon glyphicon-share-alt"></i>Keyboard shortcuts</a>
+      </li>
+      <li>
+        <a href="#"><i class="glyphicon glyphicon-info-sign"></i>Help</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

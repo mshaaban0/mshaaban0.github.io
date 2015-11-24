@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forms</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="">
+    <!--This defines the description of the page that appears under the title on google-->
+    <meta http-equiv="pics-Label" content="" />
+    <!-- This defines the url for the picture we want to appear in googe maily the logo -->
+    <meta name="ROBOTS" content="" />
+    <!--This is instead of keywords, google stoped listening to key words and made this instead of it-->
+    <meta property="og:title" content="MicroSasS Web solutions" />
+    <!-- This is the topic main title which is very important too -->
+    <meta property="og:type" content="Technology"/>
+    <!--This one is very important too contains the type of the content "Food, fashion, Lifestyle,..etc"  -->
+    <meta property="og:url" content="http://microsass.com/aboutus.html"></meta>
+    <!-- Defines the url for the page -->
+    <meta property="og:image" content="http://images.media-allrecipes.com/userphotos/250x250/00/25/41/254186.jpg"></meta>
+    <!--This one defines the url for the image -->
+    <meta property="og:site_name" content="Microsass.com"></meta>
+    <!--Defines the site name for google which is microsass.com-->
+    <link rel="canonical" href="http://allrecipes.com/recipe/banana-banana-bread/" />
+    <!--This one is important, it's something like breadcrumb it tells google the category of the product in which section-->
+
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animations.css">
+    <link rel="stylesheet" type="text/css" href="css/ui-css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    
+    <style type="text/css">
+        #not-valid, #valid, #info{
+            position: absolute;
+            width: 37px;
+            right: 14px;
+            height: 34px;
+            background: url('img/notvalid.png') no-repeat 0 0;
+            top: 0;
+        }
+        #valid{
+            background: url('img/valid.png') no-repeat 0 0;
+        }
+        #info{
+            background: url('img/info.png') no-repeat 0 0;
+        }
+    </style>
+
+
+</head>
+<body>
+<section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 crctr-cnt">
+                <div>
+                    <div class="crctr-txt-bx box-shadow">
+                        <p class="slideRight"><span>Hello,</span>This is Ed from Leads Bureau Please i am here to guide you, wisely, to show you what you need to do easily Now...</p>
+                    </div>
+                    <div class="crctr-arw col-md-12"></div>
+                    <div class="row">
+                        <div class="col-md-12"><div class="crctr-hldr animate tossing"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+
+            <div class="col-md-10">
+                <div class="page-header finance box-shadow block">
+                    <h1>Finance Register<small>Get You Free No-Obligation Qoute Now.</small></h1>
+                </div>
+                <div class="fields-cnt">
+                    <form role="form">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="block fields-block main-bg box-shadow">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h3>Personal Information</h3>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" data-texthead="Cool," data-text="Now enter your first name here and make sure not to put anything fake to get the right validation..." class="form-control box-shadow first-name" placeholder="First Name...">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control box-shadow last-name" placeholder="Last Name...">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control box-shadow street-address" placeholder="Street Address...">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="email" class="form-control box-shadow email" placeholder="Email Address...">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control box-shadow zip-code" placeholder="Zip Code...">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control box-shadow phone" placeholder="Phone Number...">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control box-shadow cell-phone" placeholder="Cell Phone...">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group ll-skin-nigran">
+                                                        <input type="text" class="form-control box-shadow birthday datepicker " placeholder="Birthday...">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control box-shadow social-number" placeholder="Social Security Number...">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div><!--/.fields-block-->
+
+
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="block fields-block main-bg box-shadow">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h3>Residence & Employement Information</h3>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <select class="form-control box-shadow">
+                                                            <option selected="selected">You Are Currently At...</option>
+                                                            <option>Option 1</option>
+                                                            <option>Option 2</option>
+                                                            <option>Option 3</option>
+                                                            <option>Option 4</option>
+                                                            <option>Option 5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <select class="form-control box-shadow">
+                                                            <option selected="selected">Rent / Mortgage Amount...</option>
+                                                            <option>Option 1</option>
+                                                            <option>Option 2</option>
+                                                            <option>Option 3</option>
+                                                            <option>Option 4</option>
+                                                            <option>Option 5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <select class="form-control box-shadow">
+                                                            <option selected="selected">How Long In Years...</option>
+                                                            <option>Option 1</option>
+                                                            <option>Option 2</option>
+                                                            <option>Option 3</option>
+                                                            <option>Option 4</option>
+                                                            <option>Option 5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <select class="form-control box-shadow">
+                                                            <option selected="selected">How Long In Months...</option>
+                                                            <option>Option 1</option>
+                                                            <option>Option 2</option>
+                                                            <option>Option 3</option>
+                                                            <option>Option 4</option>
+                                                            <option>Option 5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--/.col-md-12-->
+
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control employer-name" placeholder="Employer's Name...">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control employer-phone" placeholder="Employer's Phone...">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control occupation" placeholder="Occupation...">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <select class="form-control monthly-income">
+                                                            <option selected="selected">Monthly Income...</option>
+                                                            <option>Option 1</option>
+                                                            <option>Option 2</option>
+                                                            <option>Option 3</option>
+                                                            <option>Option 4</option>
+                                                            <option>Option 5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <select class="form-control time-job">
+                                                                    <option selected="selected">Time At Job In Years...</option>
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 2</option>
+                                                                    <option>Option 3</option>
+                                                                    <option>Option 4</option>
+                                                                    <option>Option 5</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <select class="form-control time-job">
+                                                                    <option selected="selected">Time At Job In Months...</option>
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 2</option>
+                                                                    <option>Option 3</option>
+                                                                    <option>Option 4</option>
+                                                                    <option>Option 5</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div><!--/.col-md-12-->
+                                </div><!--/.fields-block-->
+                            </div>
+                        </div>
+
+                        <div class="block fields-block box-shadow main-bg fr-notice">
+                                    <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <p>I am at LEAST 18 with a valid driver's license, I have read the 
+    Privacy Policy, and I authorize your partners to check my credit report. Without this confirmation, we are unable to process your application.</p>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <p>By checking this box and clicking the “Submit” button below, you give CarLoanASAP.com and its Affiliated Loan Service Providers your consent to receive telephone calls, including pre-recorded messages, delivered via automated technology, to the phone number(s) that you provided above, including wireless number(s), if applicable. Please note that you are not required to provide this consent to receive quotes from us and our Affiliated Loan Service Providers and your consent simply allows us and our Affiliated Loan Service Providers to contact you via these means. </p>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+                        
+                        
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6">
+                            <div class="block">
+                                <button class="btn btn-full btn-primary box-shadow ask-btn">Get Your Quote Now</button>
+                            </div>
+                            </div>
+                        </div>
+                    </form>
+                </div><!--/.fields-cnt-->
+            </div>
+
+        </div>
+    </div>
+</section>
+</body>
+</html>

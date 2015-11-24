@@ -1,0 +1,17 @@
+# Site settings
+title: Moe Shaaban
+email: info@mshaaban.com
+description: Personal Moe Shaaban portfolio and blog. Front-end Developer . Product Designer . Author
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://mshaaban.com" # the base hostname & protocol for your site
+twitter_username: mshaaban0
+github_username:  mshaaban0
+
+twitter_url: https://twitter.com/mshaaban0
+github_url: https://github.com/mshaaban0
+behance_url: https://behance.net/mshaaban
+
+highlighter: Rouge
+
+# Build settings
+markdown: kramdown

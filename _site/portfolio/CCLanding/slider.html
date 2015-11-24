@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MicroSass.com</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+    <link rel="stylesheet" type="text/css" href="http://reset5.googlecode.com/hg/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/animations.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".light").delay(4000).queue(function(n) {
+                $(this).animate({
+                    opacity:1
+                },300);
+                n();
+            });
+
+            $("#CSD .gear").delay(2000).queue(function(z) {
+                $('.gear4').animate({
+                    opacity:1
+                },300,function(){
+                    $('.gear3').animate({opacity:1},300, function(){
+                        $('.gear2').animate({opacity:1},300, function(){
+                            $('.gear1').animate({opacity:1},300);
+                        });
+                    });
+                });
+
+                z();
+            });
+
+        });
+    </script>
+    <script type="text/javascript" src="js/common.js"></script>
+    
+</head>
+
+<body>
+
+    <section class="main" id="CSD">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="contentHeader">Custom Software Management</h1>
+                    <p>Duis gravida vulputate velit, at semper sapien vulputate non. In nibh nibh, lacinia in vulputate eu, consectetur adipiscing elit. Duis gravida vulputate velit, at semper sapien vulputate non. In nibh nibh, lacinia in vulputate eu, consectetur adipiscing elit.</p>
+                    <p>Duis gravida vulputate velit, at semper sapien vulputate non. In nibh nibh, lacinia in vulputate eu, consectetur adipiscing elit. Duis gravida vulputate velit, at semper sapien vulputate non. In nibh nibh, lacinia in vulputate eu, consectetur adipiscing elit.</p>
+
+                    <div class="row details">
+                        <div class="col-md-4">
+                            <h4><i class="glyphicon glyphicon-wrench glyph-75"></i>Requirements</h4>
+                            <p>Praesent sed tristique massa. Aenean iaculis diam nec ligula ullamcorper eu tempus dolor ullamcorper. Morbi in nisi tincidunt neque gravida facilisis.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4><i class="glyphicon glyphicon-calendar glyph-75"></i>Planning</h4>
+                            <p>Praesent sed tristique massa. Aenean iaculis diam nec ligula ullamcorper eu tempus dolor ullamcorper. Morbi in nisi tincidunt neque gravida facilisis.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4><i class="glyphicon glyphicon-cog glyph-75"></i>Implementation</h4>
+                            <p>Praesent sed tristique massa. Aenean iaculis diam nec ligula ullamcorper eu tempus dolor ullamcorper. Morbi in nisi tincidunt neque gravida facilisis.</p>
+                        </div>
+                    </div>
+
+                    <div class="row details">
+                        <div class="col-md-4">
+                            <h4><i class="glyphicon glyphicon-dashboard glyph-75"></i>Testeing</h4>
+                            <p>Praesent sed tristique massa. Aenean iaculis diam nec ligula ullamcorper eu tempus dolor ullamcorper. Morbi in nisi tincidunt neque gravida facilisis.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4><i class="glyphicon glyphicon-signal glyph-75"></i>Evaluation</h4>
+                            <p>Praesent sed tristique massa. Aenean iaculis diam nec ligula ullamcorper eu tempus dolor ullamcorper. Morbi in nisi tincidunt neque gravida facilisis.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4><i class="glyphicon glyphicon-bullhorn glyph-75"></i>Delivering</h4>
+                            <p>Praesent sed tristique massa. Aenean iaculis diam nec ligula ullamcorper eu tempus dolor ullamcorper. Morbi in nisi tincidunt neque gravida facilisis.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 csd-bg">
+                    <div class="lamp hatch"></div>
+                    <div class="light"></div>
+                    <div class="line line1 pullUp"></div>
+                    <div class="gear gear1 rotate-ck"></div>
+                    <div class="gear gear2 rotate-ack"></div>
+                    <div class="gear gear3 rotate-ck"></div>
+                    <div class="gear gear4 rotate-ack"></div>
+                    <div class="line line2 slideDown"></div>
+                    <div class="idea hatch"></div>
+                </div>
+            </div> <!--End of row-->
+            <div class="row timeLine">
+                <div class="col-md-12">
+
+                    <div class="row">
+                        <div class="col-md-3 col-md-offset-2">
+                            <span>We'll get back to you in 24 Hours</span>
+                        </div>
+                        <div class="col-md-2 point-2 col-md-offset-1">
+                            <span>We are working here</span>
+                        </div>
+                    </div>
+
+                    <div class="points">
+                        <div class="point point1">
+                            <span></span>
+                        </div>
+                        <div class="point point2">
+                            <span></span>
+                        </div>
+                        <div class="point point3">
+                            <span></span>
+                        </div>
+                        <div class="point point4">
+                            <span></span>
+                        </div>
+                        <div class="point point5">
+                            <span></span>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="quote">
+                        <a href="#" data-toggle="modal" data-target="#requestQuote">Ask for a Quote</a>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="requestQuote" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h2 class="modal-title" id="myModalLabel">Request A Quote</h2>
+                        </div>
+                        <div class="modal-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Your Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email Address">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Company Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Company Category">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="6" placeholder="Your Message"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <div class="got-float">
+                                        <button type="submit" class="btn btn-none">Send</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                        
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+            <div class="row">
+                <div class="col-md-2 point-1">
+                    <span>Ask for a Quote</span>
+                </div>
+                <div class="col-md-2 col-md-offset-2">
+                    <span>Lets Discuss Business</span>
+                </div>
+                <div class="col-md-3 point-3 col-md-offset-2">
+                    <span>Done</span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+    </section>
+<!--End of aboutUs Section-->
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+{% include head.html %}
+<body class="reading">
+{% include header-nav.html %}
+
+
+
+<div class="container read-container">
+	
+	<div class="post">
+		<div class="page-header">
+			<h1 class="post-title">{{ page.title }} - <small>{{ page.date | date: "%b %-d, %Y" }}</small></h1>
+		</div>
+	    
+	    <p class="post-meta">{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+
+		<article class="post-content">
+			{{ content }}
+		</article>
+	</div>
+	<!-- /.post -->
+
+</div>
+
+{% include footer-reading.html %}
+
+</body>
+</html>
+
+
+
+
+

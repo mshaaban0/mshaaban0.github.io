@@ -1,0 +1,64 @@
+﻿.vet_slider
+{
+    width: 100%;
+    height: 260px;
+}
+
+    .vet_slider .thumbs
+    {
+        float: left;
+        width: 80px;
+        height: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+        .vet_slider .thumbs ul li
+        {
+            width: 73px;
+            height: 42px;
+            overflow: hidden;
+            display: block;
+            border: 1px solid #808080;
+            margin-bottom: 4px;
+            cursor: pointer;
+            text-align:center;
+            background-color:#000;
+        }
+
+            .vet_slider .thumbs ul li img
+            {
+                width: 100%;
+                height: auto;
+            }
+
+    .vet_slider .vet_images
+    {
+        margin-left: 85px;
+        height: 100%;
+        overflow: hidden;
+        box-shadow:-1px 0px 5px #808080;
+        border:1px solid #1f1f1f\9;
+    }
+.vet_images ul li .vet_caption
+{
+    padding:10px;
+    position:absolute;
+    z-index:100;
+    overflow:hidden;
+    background: url('../images/captionbg.png') repeat 0 0;
+}
+    .vet_images ul li .vet_caption h4
+    {
+        margin-bottom:10px;
+    }
+.vet_slider .vet_images ul {
+    width:100%;
+}
+    .vet_slider .vet_images ul li {
+        width:100%;
+    }
+.vet_slider .vet_images ul li a img {
+    width:100%;
+    height:auto;
+}

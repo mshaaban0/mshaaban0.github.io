@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>X editable</title>
+	<!-- the required css files -->
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap-editable.css">
+	<style type="text/css">
+		html, body{
+			height: 100%;
+		}
+		
+		#content{
+			width: 70%;
+			margin: 0 auto;
+		}
+		
+	</style>
+	
+	<!-- the required Javascript files -->
+	<script src="../../js/jquery-1.10.2.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../js/bootstrap-editable.min.js"></script>
+	<script type="text/javascript" src="../../js/expanding.js"></script>
+</head>
+<body>
+	<div id="content">
+		<!-- Note the class editable-customized is necessary it gives the element the look of wrike editable --> 
+		<div id="username" data-type="textarea" data-pk="1" data-url="process.php" class="editable-customized customized-editable-textarea" ">username</div>
+		<hr>
+		<div id="description" data-type="text" data-pk="1" data-url="process.php" class="editable-customized editable-customized-input">description</div>
+	</div>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$.fn.editable.defaults.mode = 'inline';
+		$.fn.editableExtended = function(options){
+			var editableOptions = options.editableOptions || {};
+			$(this).editable(editableOptions);
+			$(this).click(function(){ 
+				$this = $(this);
+				setTimeout(function(){
+					var textarea = $this.next().find("textarea");
+					textarea.expandingTextarea();
+					textarea.focus().on('keydown', function(e){
+						var code = e.keyCode || e.which;
+						if(code == 13) {
+							$(this).text($.trim($(this).text()));
+							$(this).closest("form").submit();
+							e.preventDefault();
+						}
+					});
+				}, 50);			
+			});
+		}
+		
+		$('#username, #description').editableExtended({
+			"editableOptions":
+			{
+				clear: false,
+				ajaxOptions: {
+					dataType: 'json'
+				},
+				showbuttons: false,
+				onblur: 'submit',
+				success: function (response, newValue) {
+					if(!response.status == "success")
+					{
+						return response.responseText;
+					}
+				},
+				error: function(response, newValue) {
+					if(response.status === 500) {
+						return 'Service unavailable. Please try later.';
+					} else {
+						return response.responseText;
+					}
+				}
+			}
+		});
+	});
+	</script>
+</body>
+</html>

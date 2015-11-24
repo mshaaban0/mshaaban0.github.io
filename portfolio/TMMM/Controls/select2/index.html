@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+	<link rel="stylesheet" type="text/css" href="../../css/select2.css">
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+	
+	<style type="text/css">
+		body{
+			padding: 50px;
+		}
+		
+		#select2-drop{
+			min-height: 230px;
+		}
+	</style>
+</head>
+<body>
+	Multi-select
+	<div class="auto-complete-container">
+		<div class="selections"></div>
+		<span class="add-item"><a href="#" class="glyphicon glyphicon-plus"></a></span>
+		<div class="options-container">
+				<select class="options-list1 auto-complete-options">
+			        <option value="b">Wyoming</option>
+			        <option value="c">Sami</option>
+			        <option value="d">Ali</option>
+			        <option value="e">Lolo</option>
+			        <option value="f">Hoho</option>
+			        <option value="h">Dodo</option>
+			        <option value="i">Zozo</option>
+			    </select>
+		</div>
+	</div>
+
+	<br>
+	single select
+	<div class="auto-complete-container-2">
+		<div class="selections"></div>
+		<span class="add-item"><a href="#" class="glyphicon glyphicon-plus"></a></span>
+		<div class="options-container">
+				<select class="options-list1 auto-complete-options">
+			        <option value="b">Wyoming</option>
+			        <option value="c">Sami</option>
+			        <option value="d">Ali</option>
+			        <option value="e">Lolo</option>
+			        <option value="f">Hoho</option>
+			        <option value="h">Dodo</option>
+			        <option value="i">Zozo</option>
+			    </select>
+		</div>
+	</div>
+	<br>
+	serverside
+	<div class="auto-complete-container-3">
+		<div class="selections"></div>
+		<span class="add-item"><a href="#" class="glyphicon glyphicon-plus"></a></span>
+		<input type="hidden" class="ajax-complete" id="e6" />
+	</div>
+	
+	<br>
+	serverside single
+	<div class="auto-complete-container-3">
+		<div class="selections"></div>
+		<span class="add-item"><a href="#" class="glyphicon glyphicon-plus"></a></span>
+		<input type="hidden" class="ajax-complete" id="e7" />
+	</div>
+	
+	<br>
+	column select
+	<div class="auto-complete-container-4" style="float: right; width: 300px;">
+		<div class="selections"></div>
+		<span class="add-item"><a href="#" class="glyphicon glyphicon-plus"></a></span>
+		<div class="options-container">
+				<select class="options-list1 auto-complete-options">
+			        <option value="b">Wyoming</option>
+			        <option value="c">Sami</option>
+			        <option value="d">Ali</option>
+			        <option value="e">Lolo</option>
+			        <option value="f">Hoho</option>
+			        <option value="h">Dodo</option>
+			        <option value="i">Zozo</option>
+			    </select>
+		</div>
+	</div>
+
+    <script src="../../js/jquery-1.10.2.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../js/select2.min.js"></script>
+	<script type="text/javascript">
+
+		function movieFormatResult(item) {
+			markup = "<span>" + item.name + "</span>"
+			return markup;
+		}
+
+		$.fn.plusSearch = function(options)
+		{
+			var options = options || {},
+				isSingle = options.isSingle ? options.isSingle : false,
+				isAjax = ( options.selectToOptions && options.selectToOptions.ajax ),
+				containerName = $(this),
+				SelectList =  isAjax ? containerName : containerName.find("select"),
+				selectionsContainer = !isAjax ? containerName.find(".selections") : containerName.prevAll(".selections"),
+				selectToOptions = options.selectToOptions || {},
+				lookupContainer = isAjax ? containerName.parent("div") : containerName;
+				
+			var generateItemTag = function(e)
+			{
+				if(isSingle)
+				{
+					if(selectionsContainer.find(".selected-item").length == 0)
+					{
+						if(isAjax)
+						{
+							var ajaxobject = e.object,
+							selectedValue = ajaxobject.id,
+							selectedText = ajaxobject.name;
+						}
+						else
+						{
+							var selectedValue = e.val,
+								selectedOption = SelectList.find("option[value='" + selectedValue + "']"),
+								selectedText = selectedOption.text();
+							selectedOption.replaceWith("<x_option value='" + selectedValue + "'>" + selectedText + "</x_option>");
+						}
+						selectionsContainer.append("<span class='selected-item' data-value='" + selectedValue + "'><i class='remove-item'>&times;</i><b class='text'>" + selectedText + "</b></span>");
+					}
+					
+					lookupContainer.find(".add-item").hide();
+				}
+				else
+				{
+					if(isAjax)
+					{
+						var ajaxobject = e.object,
+							selectedValue = ajaxobject.id,
+							selectedText = ajaxobject.name;
+					}
+					else
+					{
+						var selectedValue = e.val,
+							selectedOption = SelectList.find("option[value='" + selectedValue + "']"),
+							selectedText = selectedOption.text();
+						selectedOption.replaceWith("<x_option value='" + selectedValue + "'>" + selectedText + "</x_option>");
+					}
+					selectionsContainer.append("<span class='selected-item' data-value='" + selectedValue + "'><i class='remove-item'>&times;</i><b class='text'>" + selectedText + "</b></span>");
+					
+					lookupContainer.find(".add-item").show();
+				}
+			}
+
+			SelectList.select2(selectToOptions)
+			.on("select2-selecting", function(e) { 
+				generateItemTag(e);
+			});
+			
+			if(!isAjax)
+			{
+				containerName.find(".add-item").on("click", function(){
+					SelectList.select2("open");
+				});
+			}
+			else
+			{
+				containerName.parent("div").find(".add-item").on("click", function(){
+					SelectList.select2("open");
+				});
+			}
+			
+			lookupContainer.on("click", ".remove-item", function(){
+				var $this = $(this),
+					container = $this.closest(containerName),
+					selectList = container.find("select"),
+					value = $this.closest(".selected-item").data("value"),
+					text = $this.closest(".selected-item").find(".text").text(),
+					tempOption = selectList.find("x_option[value='" + value + "']");
+					tempOption.replaceWith("<option value='" + value + "'>" + text + "</option>");
+					
+				lookupContainer.find(".add-item").show();		
+				$this.closest(".selected-item").remove();
+			});
+		}
+
+		$(document).ready(function() {
+			$(".auto-complete-container").plusSearch();
+			$(".auto-complete-container-4").plusSearch();
+			$(".auto-complete-container-2").plusSearch({"isSingle": true});
+			$("#e6").plusSearch({
+				selectToOptions: {
+					id: function(bond){return {id: bond.id};},
+					ajax: { // instead of writing the function to execute the request we use Select2's convenient helper
+						url: "http://localhost:8080/tmmm_template/TMMM/controls/select2/data.php?callback=?",
+						jsonpCallback: 'jsonCallback',
+						contentType: "application/json",
+						dataType: 'jsonp',
+						data: function (term, page) {
+							return {
+								q: term, // search term
+								page_limit: 10,
+								//callback: 'results',
+								exclude: $(this).closest('div').find(".selected-item").map(function() {
+									return $(this).data("value");
+								})
+								.get() 
+							};
+						},
+						results: function (data, page) { // parse the results into the format expected by Select2.
+							// since we are using custom formatting functions we do not need to alter remote JSON data
+							return {results: data.items};
+						}
+					},
+					formatResult: movieFormatResult, // omitted for brevity, see the source of this page
+					escapeMarkup: function (m) { return m; } // we do not want to escape markup since we are displaying html in results
+				}
+			});
+			
+			$("#e7").plusSearch({
+				"isSingle": true,
+				selectToOptions: {
+					id: function(bond){return {id: bond.id};},
+					ajax: { // instead of writing the function to execute the request we use Select2's convenient helper
+						url: "data.php",
+						url: "http://localhost:8080/tmmm_template/TMMM/controls/select2/data.php?callback=?",
+						jsonpCallback: 'jsonCallback',
+						contentType: "application/json",
+						dataType: 'jsonp',
+						data: function (term, page) {
+							return {
+								q: term, // search term
+								page_limit: 10,
+								exclude: $(this).closest('div').find(".selected-item").map(function() {
+									return $(this).data("value");
+								})
+								.get()
+							};
+						},
+						results: function (data, page) { // parse the results into the format expected by Select2.
+							// since we are using custom formatting functions we do not need to alter remote JSON data
+							return {results: data.items};
+						}
+					},
+					formatResult: movieFormatResult, // omitted for brevity, see the source of this page
+					escapeMarkup: function (m) { return m; } // we do not want to escape markup since we are displaying html in results
+				}
+			});
+		});
+	</script>
+</body>
+</html>

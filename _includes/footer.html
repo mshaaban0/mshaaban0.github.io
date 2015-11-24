@@ -1,0 +1,38 @@
+<footer>
+    <div class="container">
+        <div class="pull-left">
+            All Copyrights Reserved To Moe Shaaban - 2014
+        </div>
+        <div class="pull-right">
+            <ul class="list-inline">
+                <li>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-github-alt"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+{% include javascript.html %}
+
+<script>
+    // Call The Waves
+    appMaster.waves();
+    
+    $('#navScroll').onePageNav();
+
+    $(document).scroll(function() {    
+        var scroll = $(document).scrollTop();
+         //>=, not <=
+        if (scroll >= 10) {
+            //clearHeader, not clearheader - caps H
+            $(".navbar").addClass("dark-header");
+        }else{
+            $(".navbar").removeClass("dark-header");
+        }
+    }); //missing );
+</script>

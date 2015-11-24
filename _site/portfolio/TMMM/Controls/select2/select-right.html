@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+	<link rel="stylesheet" type="text/css" href="../../css/select2.css">
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+	
+	<style type="text/css">
+		body, html{
+			padding: 0;
+			height: 100%;
+		}
+		
+		.example-wrapper{
+			float: left; width: 25%; min-height: 25%; border: 2px solid gray; box-sizing: border-box; padding: 10px;
+		}
+		
+		.main-container
+		{
+			width: 100%; height: 100%; border: 2px solid lightgray;
+		}
+		
+		#dodo{
+			min-height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div id="dodo">
+		<div>This is a scondary container which can hold select items</div>
+	</div>
+	<div class="main-container">
+		<!-- for local data source you give the parent container selector to the plugin, in this case it's .auto-complete-container-4 -->
+		<div class="auto-complete auto-complete-container-4 example-wrapper">
+			
+			<div style="height: 50px;">Single Local data source * rightCenter location *  with outer target</div>
+			<div class="selections"></div>
+			<span class="add-item"><a href="#" class="glyphicon glyphicon-plus"></a></span>
+			<div class="options-container">
+					<select class="options-list1 auto-complete-options">
+						<option value="b">WyomingWyoming</option>
+						<option value="c">SamiSami</option>
+						<option value="d">AliAli</option>
+						<option value="e">LoloLolo</option>
+						<option value="f">Hoho</option>
+						<option value="h">Dodo</option>
+						<option value="i">Zozo</option>
+						<option value="x">xxxxxxxxxxxxxxxx</option>
+						<option value="rr">rrrrrrrrr</option>
+						<option value="t">tttttttttttt</option>
+						<option value="y">yyyyyyyyyy</option>
+						<option value="oo">ooooooo</option>
+						<option value="lll">lllllll</option>
+						<option value="mm">mmmmmmmmmm</option>
+					</select>
+			</div>
+		</div>
+		
+		<!-- for ajax data source you give the hidden input selector to the plugin, in this case it's #e7 -->
+		<div class="auto-complete example-wrapper">
+			<div style="height: 50px;">multi AJAX data source * leftCenter location  * with outer target</div>
+			<div class="selections"></div>
+			<span class="add-item"><a href="#" class="glyphicon glyphicon-plus"></a></span>
+			<input type="hidden" class="ajax-complete" id="e7"/>
+		</div>
+		
+		<div class="auto-complete auto-complete-container-5 example-wrapper">
+			<div style="height: 50px;">Multi Local data source * rightCenter location * with outer target</div>
+			<div class="selections"></div>
+			<span class="add-item"><a href="#" class="glyphicon glyphicon-plus"></a></span>
+			<div class="options-container">
+					<select class="options-list1 auto-complete-options">
+						<option value="b">WyomingWyoming</option>
+						<option value="c">SamiSami</option>
+						<option value="d">AliAli</option>
+						<option value="e">LoloLolo</option>
+						<option value="f">Hoho</option>
+						<option value="h">Dodo</option>
+						<option value="i">Zozo</option>
+						<option value="x">xxxxxxxxxxxxxxxx</option>
+						<option value="rr">rrrrrrrrr</option>
+						<option value="t">tttttttttttt</option>
+						<option value="y">yyyyyyyyyy</option>
+						<option value="oo">ooooooo</option>
+						<option value="lll">lllllll</option>
+						<option value="mm">mmmmmmmmmm</option>
+					</select>
+			</div>
+		</div>
+		
+		<!-- for ajax data source you give the hidden input selector to the plugin, in this case it's #e7 -->
+		<div class="auto-complete example-wrapper">
+			<div style="height: 50px;">Multi AJAX data source * no position * local set data</div>
+			<div class="selections"></div>
+			<span class="add-item"><a href="#" class="glyphicon glyphicon-plus"></a></span>
+			<input type="hidden" class="ajax-complete" id="e8"/>
+		</div>
+		
+		<div class="auto-complete auto-complete-container-6 example-wrapper">
+			<div style="height: 50px;">Multi Local data source * no position *  local set data</div>
+			<div class="selections"></div>
+			<span class="add-item"><a href="#" class="glyphicon glyphicon-plus"></a></span>
+			<div class="options-container">
+					<select class="options-list1 auto-complete-options">
+						<option value="b">WyomingWyoming</option>
+						<option value="c">SamiSami</option>
+						<option value="d">AliAli</option>
+						<option value="e">LoloLolo</option>
+						<option value="f">Hoho</option>
+						<option value="h">Dodo</option>
+						<option value="i">Zozo</option>
+					</select>
+			</div>
+		</div>
+		
+		<div class="auto-complete auto-complete-container-7 example-wrapper">
+			<div style="height: 50px;">Multi Local data source * position rightCenter * local set data</div>
+			<div class="selections"></div>
+			<span class="add-item"><a href="#" class="glyphicon glyphicon-plus"></a></span>
+			<div class="options-container">
+					<select class="options-list1 auto-complete-options">
+						<option value="b">WyomingWyoming</option>
+						<option value="c">SamiSami</option>
+						<option value="d">AliAli</option>
+						<option value="e">LoloLolo</option>
+						<option value="f">Hoho</option>
+						<option value="h">Dodo</option>
+						<option value="i">Zozo</option>
+					</select>
+			</div>
+		</div>
+	</div>
+
+    <script src="../../js/jquery-1.10.2.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../js/select2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#e7").plusSearchPosition({position: "leftCenter",  "targetContainer": "#dodo",
+			selectToOptions: {
+					id: function(bond){return {id: bond.id};},
+					ajax: { // instead of writing the function to execute the request we use Select2's convenient helper
+						url: "data.php",
+						url: "http://localhost:8080/tmmm_template/TMMM/controls/select2/data.php?callback=?",
+						jsonpCallback: 'jsonCallback',
+						contentType: "application/json",
+						dataType: 'jsonp',
+						data: function (term, page) {
+							return {
+								q: term, // search term
+								page_limit: 10,
+								exclude: $('.selected-item[data-return="#e7"]').map(function() {
+									return $(this).data("value");
+								})
+								.get()
+							};
+						},
+						results: function (data, page) { // parse the results into the format expected by Select2.
+							// since we are using custom formatting functions we do not need to alter remote JSON data
+							console.log(data);
+							return {results: data.items};
+						}
+					},
+					formatResult: movieFormatResult, // omitted for brevity, see the source of this page
+					escapeMarkup: function (m) { return m; } // we do not want to escape markup since we are displaying html in results
+				}
+			});
+			
+			$("#e8").plusSearchPosition({isSingle: false, x_position: "leftCenter",  "x_targetContainer": "#dodo",
+			selectToOptions: {
+					id: function(bond){return {id: bond.id};},
+					ajax: { // instead of writing the function to execute the request we use Select2's convenient helper
+						url: "data.php",
+						url: "http://localhost:8080/tmmm_template/TMMM/controls/select2/data.php?callback=?",
+						jsonpCallback: 'jsonCallback',
+						contentType: "application/json",
+						dataType: 'jsonp',
+						data: function (term, page) {
+							return {
+								q: term, // search term
+								page_limit: 10,
+								exclude: $(this).closest('div').find(".selected-item").map(function() {
+									return $(this).data("value");
+								})
+								.get()
+							};
+						},
+						results: function (data, page) { // parse the results into the format expected by Select2.
+							// since we are using custom formatting functions we do not need to alter remote JSON data
+							return {results: data.items};
+						}
+					},
+					formatResult: movieFormatResult, // omitted for brevity, see the source of this page
+					escapeMarkup: function (m) { return m; } // we do not want to escape markup since we are displaying html in results
+				}
+			});
+			
+			$(".auto-complete-container-4").plusSearchPosition({isSingle: true, position: "rightCenter", "targetContainer": "#dodo"});
+			$(".auto-complete-container-5").plusSearchPosition({isSingle: false, position: "rightCenter", "targetContainer": "#dodo"});
+			$(".auto-complete-container-6").plusSearchPosition({isSingle: false});
+			$(".auto-complete-container-7").plusSearchPosition({isSingle: false, position: "rightCenter"});
+			
+		});
+		
+		function movieFormatResult(item) {
+			markup = "<span>" + item.name + "</span>"
+			return markup;
+		}
+
+		$.fn.plusSearchPosition = function(options)
+		{
+			var options = options || {},
+				isSingle = options.isSingle ? options.isSingle : false,
+				isAjax = ( options.selectToOptions && options.selectToOptions.ajax ),
+				containerName = $(this),
+				SelectList =  isAjax ? containerName : containerName.find("select"),
+				selectionsContainer = !isAjax ? containerName.find(".selections") : containerName.prevAll(".selections"),
+				selectToOptions = options.selectToOptions || {},
+				lookupContainer = isAjax ? containerName.parent("div") : containerName,
+				position = options.position ? options.position : "right",
+				targetContainer = options.targetContainer ? $(options.targetContainer) : false,
+				selectorName = containerName.selector;
+				
+			var generateItemTag = function(e)
+			{
+				var temptargetContainer = targetContainer ? targetContainer : selectionsContainer;
+				if(isSingle)
+				{
+					var expression = '';
+					if(targetContainer)
+					{
+						expression = '[data-return="' + selectorName + '"]';
+					}
+					if(temptargetContainer.find(".selected-item" + expression).length == 0)
+					{
+						if(isAjax)
+						{
+							var ajaxobject = e.object,
+							selectedValue = ajaxobject.id,
+							selectedText = ajaxobject.name;
+						}
+						else
+						{
+							var selectedValue = e.val,
+								selectedOption = SelectList.find("option[value='" + selectedValue + "']"),
+								selectedText = selectedOption.text();
+							selectedOption.replaceWith("<x_option value='" + selectedValue + "'>" + selectedText + "</x_option>");
+						}
+						temptargetContainer.append("<span data-return='" + selectorName + "' class='selected-item selected-item-default' data-value='" + selectedValue + "'><i class='remove-item'>&times;</i><b class='text'>" + selectedText + "</b></span>");
+					}
+					
+					lookupContainer.find(".add-item").hide();
+				}
+				else
+				{
+					if(isAjax)
+					{
+						var ajaxobject = e.object,
+							selectedValue = ajaxobject.id,
+							selectedText = ajaxobject.name;
+					}
+					else
+					{
+						var selectedValue = e.val,
+							selectedOption = SelectList.find("option[value='" + selectedValue + "']"),
+							selectedText = selectedOption.text();
+						selectedOption.replaceWith("<x_option value='" + selectedValue + "'>" + selectedText + "</x_option>");
+					}
+					temptargetContainer.append("<span data-return='" + selectorName + "' class='selected-item selected-item-default' data-value='" + selectedValue + "'><i class='remove-item'>&times;</i><b class='text'>" + selectedText + "</b></span>");
+					
+					lookupContainer.find(".add-item").show();
+				}
+			} // End generate tag
+			
+			SelectList.removeClass("select2-offscreen");
+			SelectList.select2(selectToOptions)
+			.on("select2-selecting", function(e) { 
+				generateItemTag(e);
+			});
+			
+			if(!isAjax)
+			{
+				containerName.find(".add-item").on("click", function(){
+					switch(position)
+					{
+						case "leftCenter":
+							SelectList.css({"position": "fixed", "left": $(this).offset().left  - 220 + "px", 
+								"top": $(this).offset().top - parseInt( SelectList.find("option").length * 27 / 2 ) + "px"});
+							break;
+						case "rightCenter":
+						//console.log( $(this).offset().top - parseInt( SelectList.find("option").length * 27 / 2 ) );
+							var menuHeight = parseInt( SelectList.find("option").length * 27 / 2 );
+							SelectList.css({"position": "fixed", "top": $(this).offset().top - (menuHeight > 117 ? 117 : menuHeight) + "px",
+								"left": ($(this).offset().left + 20) + "px"});
+						
+							if( ( $(window).width() - ($(this).offset().left + 225) ) < 0 )
+							{
+								SelectList.css({"left": ($(this).offset().left - 200) + "px", "top": ( $(this).offset().top + 20 ) + "px"});
+							}
+							console.log( parseInt( SelectList.css("top") ) );
+							if( parseInt( SelectList.css("top") ) < 0 )
+							{
+							console.log("got here");
+								SelectList.css({"position": "fixed", "top": "0px"});
+							}
+							break;
+					}
+					SelectList.select2(selectToOptions);
+					SelectList.select2("open");
+				});
+			}
+			else
+			{
+				containerName.parent("div").find(".add-item").on("click", function(){
+					switch(position)
+					{
+						case "leftCenter":
+							SelectList.prevAll(".select2-container").css({"position": "fixed", "left": $(this).offset().left  - 220 + "px", 
+								"top": $(this).offset().top - 117+ "px"});
+							if( (($(this).offset().left - 225) ) < 0 )
+							{
+								SelectList.prevAll(".select2-container").css({"position": "fixed", "left": $(this).offset().left + "px", 
+								"top": $(this).offset().top + 20+ "px"});
+							}
+							if( parseInt( SelectList.prevAll(".select2-container").css("top") ) < 0 )
+							{
+								SelectList.prevAll(".select2-container").css("top", "0")
+							}
+							break;
+						case "rightCenter":
+							SelectList.prevAll(".select2-container").css({"position": "fixed", "top": $(this).offset().top - 117+ "px",
+							"left": ($(this).offset().left + 20) + "px"});
+							if( ( $(window).width() - ($(this).offset().left + 225) ) < 0 )
+							{
+								SelectList.prevAll(".select2-container").css({"left": ($(this).offset().left - 200) + "px", 
+								"top": ( $(this).offset().top + 20 ) + "px"});
+							}
+							
+							if( parseInt( SelectList.prevAll(".select2-container").css("top") ) < 0 )
+							{
+								SelectList.prevAll(".select2-container").css("top", "0")
+							}
+							break;						
+					}
+					SelectList.select2("open");
+				});
+			}
+		}
+		
+		$(document).on("click", ".remove-item", function(){
+			var $this = $(this),
+				container = $this.closest(".selected-item"),
+				returnArea = container.data("return");
+				
+				selectList = $(returnArea).find("select"),
+				value = $this.closest(".selected-item").data("value"),
+				text = $this.closest(".selected-item").find(".text").text(),
+				tempOption = selectList.find("x_option[value='" + value + "']");
+				tempOption.replaceWith("<option value='" + value + "'>" + text + "</option>");
+				
+			if( $(returnArea).find(".add-item").length )
+			{
+				$(returnArea).find(".add-item").show();	
+			}
+			else
+			{
+				$(returnArea).closest(".auto-complete").find(".add-item").show();
+			}
+			container.remove();
+		});
+		
+		// 99% this code will be removed
+		/*lookupContainer.on("click", ".remove-item", function(){
+			var $this = $(this),
+				container = $this.closest(containerName),
+				selectList = container.find("select"),
+				value = $this.closest(".selected-item").data("value"),
+				text = $this.closest(".selected-item").find(".text").text(),
+				tempOption = selectList.find("x_option[value='" + value + "']");
+				tempOption.replaceWith("<option value='" + value + "'>" + text + "</option>");
+				
+			lookupContainer.find(".add-item").show();		
+			$this.closest(".selected-item").remove();
+		});*/
+	</script>
+</body>
+</html>

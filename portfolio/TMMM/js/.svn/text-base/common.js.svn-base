@@ -1,0 +1,156 @@
+$(document).ready(function(){
+	$('.has-tooltip').tooltip();
+	
+
+	var docHeight = $(document).height();
+			$('#container').height(docHeight - 80);
+			$('body').height(docHeight);
+
+	
+
+	
+
+
+
+	var layoutSettings_Outer = {
+		
+		west: {
+			onclose_end:			function () { myLayout2.sizePane("east", 500); },
+			onopen_start:			function () { myLayout2.sizePane("east", 200); }
+		}
+	,	east: {
+			onclose_end:			function () { alert("END South pane close \n\n onclose_end callback"); }
+		}
+	};
+
+
+	var myLayout = $('#container').layout(),
+	 	myLayout2 = $('#paddingWrapper').layout(layoutSettings_Outer),
+	 	centerHeaderHeight = $('.center-header').outerHeight(),
+	 	centerHeight = $('.ui-layout-center').height(),
+	 	rightHeight = $('.ui-layout-pane-east').height();
+
+	myLayout2.sizePane("west", 272);
+
+	myLayout2.addPinBtn( ".filter-control", "east");
+	myLayout2.addPinBtn( ".toggle-bar", "west");
+
+
+	
+
+
+
+
+
+
+
+
+	$('.list1-con').css('height', (centerHeight - centerHeaderHeight - 25) + 'px');
+	$('.filters-container').css('height', (rightHeight - 56) + 'px');
+	
+	$('.list1-con, .filters-container').jScrollPane();
+
+	$(".filterCollapse").collapse();
+
+
+	
+	// check boxes toggle event
+	$(document).on("click", ".check-btn", function(){ 
+		var checkSpan = $(this).find("span"),
+		checkBox = checkSpan.find('input[type="checkbox"]');
+		checkSpan.toggleClass("checked");
+		if(checkSpan.hasClass("checked"))
+		{
+			checkBox.prop("checked", true);
+		}
+		else
+		{
+			checkBox.prop("checked", false);
+		}
+	});
+	
+	function getFilterTag(value, text, returnContainer)
+	{
+		return '<span class="itemCon" data-return-container="' + returnContainer + '" data-filter-value="' + value + '">\
+					<span class="itemName">' + text + '</span>\
+					<span class="itemDelete">x</span>\
+				  </span>';
+	}
+	// add filters
+	$(document).on("click", "[data-filter-target] .check-btn", function(){
+		var $this = $(this),
+		targetCintainer = $this.parent("[data-filter-target]").data("filter-target"),
+		checkBox = $this.find('input[type="checkbox"]'),
+		labelText = $this.find("label").text(),
+		returnContainer = "[data-id='" + $this.parent("[data-filter-target]").data("id") + "']",
+		value = checkBox.prop("value"),
+		html = getFilterTag(value, labelText, returnContainer);
+		if(checkBox.is(":checked") && $(targetCintainer).find('[data-filter-value="' + value + '"]').length == 0)
+		{
+			$(targetCintainer).append(html);
+		}
+		else
+		{
+			$(targetCintainer).find('[data-filter-value="' + value + '"]').remove();
+		}
+	});
+	
+	// add filters
+	$(document).on("click", "[data-return-container] .itemDelete", function(){
+		var $this = $(this),
+		parent = $this.parent(),
+		returnContainer = parent.data("return-container"),
+		value = parent.data("filter-value");
+		$(returnContainer).find("input[value='" + value + "']").closest(".check-btn").trigger("click");
+	});
+	
+	var myFunction = function(selectorName, selectedValue, selectedText)
+	{
+		return '<span data-return="' + selectorName + '" data-value="' + selectedValue + '" class="itemCon selected-item">\
+			<span class="itemName">' + selectedText + '</span>\
+			<span class="itemDelete remove-item">x</span>\
+		</span>';
+	}
+	
+	$(".auto-1").plusSearchPosition({isSingle: false,
+		selectToOptions: {
+			formatNoMatches: function(term) {
+				return "<div class='select2-result-label'><span class='select2-match'></span>No matches found for <b>" + term + " </b></div>";
+			  }
+		},
+		position: "leftCenter", "targetContainer": ".selected-assigned-to", "drawCallback": myFunction});
+
+	$(document).on("click", "[data-return]", function(){
+		var targetContainer = $($(this).data("return"));
+		
+		if(targetContainer.find("select").length)
+		{
+			targetContainer.find("select")
+				.css({"position": "fixed", "top": ( $(this).offset().top + 20 ) + "px", "left": $(this).offset().left + "px"})
+				.addClass("belowItem").data("elementName", $(this).data("value"));
+				console.log("button click: " + targetContainer.find("select").hasClass("belowItem"));
+			targetContainer.find("select").select2().select2("open");
+		}
+		else($($(this).data("return")).find("select").length)
+		{
+			
+		}
+	});
+	$('.pop-this-over').popover({ 
+    	html : true,
+    	title: function() {
+      		return $(".popover-head").html();
+    	},
+    	content: function() {
+    	  return $(".popover-content").html();
+    	}
+	});
+
+
+
+
+
+
+});
+
+
