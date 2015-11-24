@@ -208,7 +208,7 @@ header{
     background: -ms-linear-gradient(top,  rgba(33,45,95,1) 0%,rgba(59,67,119,1) 45%,rgba(80,55,112,1) 94%); /* IE10+ */
     background: linear-gradient(to bottom,  rgba(33,45,95,1) 0%,rgba(59,67,119,1) 45%,rgba(80,55,112,1) 94%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#212d5f', endColorstr='#503770',GradientType=0 ); /* IE6-9 */
-    height: 560px;
+    height: 603px;
     position: relative;
     padding-top:62px;
     &.alt-header{
@@ -294,7 +294,7 @@ header{
     }
 
     .masthead{
-        padding-top:100px;
+        padding-top:128px;
         color:$white-color;
         @include text-shadow();
         h1{

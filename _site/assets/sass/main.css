@@ -312,7 +312,7 @@ header {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#212d5f', endColorstr='#503770',GradientType=0 );
   /* IE6-9 */
-  height: 560px;
+  height: 603px;
   position: relative;
   padding-top: 62px; }
   header.alt-header {
@@ -382,7 +382,7 @@ header {
       padding-left: 10px;
       padding-right: 10px; }
   header .masthead {
-    padding-top: 100px;
+    padding-top: 128px;
     color: #FFFFFF;
     -webkit-text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     -moz-text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
