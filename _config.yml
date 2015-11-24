@@ -11,7 +11,7 @@ twitter_url: https://twitter.com/mshaaban0
 github_url: https://github.com/mshaaban0
 behance_url: https://behance.net/mshaaban
 
-highlighter: Rouge
+highlighter: pygments
 
 # Build settings
 markdown: kramdown
