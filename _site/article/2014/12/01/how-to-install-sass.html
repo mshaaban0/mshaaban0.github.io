@@ -7,20 +7,21 @@
     <!-- For Google -->
     <link rel="author" href="https://plus.google.com/+MoeShaaban">
     <link rel="publisher" href="https://plus.google.com/+MoeShaaban">
-    <!-- for Twitter -->          
+    <!-- for Twitter -->
     <meta name="twitter:card" content="photo">
     <meta name="twitter:site" content="">
     <meta name="twitter:title" content="">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="">
     <meta name="twitter:url" content="">
-    <!-- for Facebook OpenGraph -->          
+    <!-- for Facebook OpenGraph -->
     <meta property="og:title" content="" />
     <meta property="og:type" content="" />
     <meta property="og:image" content="" />
     <meta property="og:url" content="" />
     <meta property="og:description" content="" />
-    
+    <meta name="google-site-verification" content="49i0oWDrtq2qmG-lEz7heCYkeR3OzgyBkn2hjD7CBTw" />
+
     <!-- Canonical -->
     <link rel="canonical" href="">
 
@@ -43,6 +44,7 @@
     <![endif]-->
 
 </head>
+
 <body class="reading">
 <header class="alt-header">
 
@@ -121,10 +123,11 @@
   <li>Check if ruby installed correctly, type :</li>
 </ol>
 
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre>ruby -v  <span class="c1">#this should output something like the below</span>
-ruby 2.0.0p481<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre><span class="nf">ruby</span><span class="w"> </span><span class="nt">-v</span><span class="w">  </span><span class="c">#this should output something like the below</span><span class="w">
+</span><span class="nf">ruby</span><span class="w"> </span><span class="nx">2.0.0p481</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h3 id="installing-sass-with-gem-">Installing SASS With Gem :</h3>
 
@@ -133,24 +136,24 @@ ruby 2.0.0p481<span class="w">
   <li>type the following CLI to install SASS</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell">gem install sass</code></pre></figure>
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="nf">gem</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">sass</span></code></pre></figure>
 
 <ul>
   <li>This should output :</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell">Fetching: sass-3.4.2.gem <span class="o">(</span>100%<span class="o">)</span>
-Successfully installed sass-3.4.2
-Parsing documentation <span class="k">for </span>sass-3.4.2
-Installing <span class="nb">ri </span>documentation <span class="k">for </span>sass-3.4.2
-1 gem installed</code></pre></figure>
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="nf">Fetching:</span><span class="w"> </span><span class="nx">sass-3.4.2.gem</span><span class="w"> </span><span class="p">(</span><span class="mi">100</span><span class="o">%</span><span class="p">)</span><span class="w">
+</span><span class="nf">Successfully</span><span class="w"> </span><span class="nx">installed</span><span class="w"> </span><span class="nx">sass-3.4.2</span><span class="w">
+</span><span class="nf">Parsing</span><span class="w"> </span><span class="nx">documentation</span><span class="w"> </span><span class="nx">for</span><span class="w"> </span><span class="nx">sass-3.4.2</span><span class="w">
+</span><span class="nf">Installing</span><span class="w"> </span><span class="nx">ri</span><span class="w"> </span><span class="nx">documentation</span><span class="w"> </span><span class="nx">for</span><span class="w"> </span><span class="nx">sass-3.4.2</span><span class="w">
+</span><span class="mi">1</span><span class="w"> </span><span class="nf">gem</span><span class="w"> </span><span class="nx">installed</span></code></pre></figure>
 
 <ul>
   <li>Check if SASS installed :</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell">sass -v
-Sass 3.4.2</code></pre></figure>
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="nf">sass</span><span class="w"> </span><span class="nt">-v</span><span class="w">
+</span><span class="nf">Sass</span><span class="w"> </span><span class="nx">3.4.2</span></code></pre></figure>
 
 <p>That should do it, now put sass into action and run it.</p>
 
@@ -158,8 +161,9 @@ Sass 3.4.2</code></pre></figure>
   <li>Navigate to your sass folder</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="nb">cd</span> /PATH/TO/SASS-FOLDER --watch style.scss:style.css<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre><span class="nf">cd</span><span class="w"> </span><span class="nx">/PATH/TO/SASS-FOLDER</span><span class="w"> </span><span class="nt">--watch</span><span class="w"> </span><span class="nx">style.scss:style.css</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p>Boom now it’s up and running.</p>
 
