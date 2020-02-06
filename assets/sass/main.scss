@@ -883,7 +883,7 @@ pre{
         height: 2px;
         background: $white-color;
         width:25px;
-        @include transform(rotate(0deg));
+        transform: rotate(0deg);
         @include transition();
     }
     &.animate{
@@ -891,11 +891,11 @@ pre{
         span{
             height:1px;
             &.one{
-                @include transform(rotate(495deg));
+                transform: rotate(495deg);
                 margin-bottom:0;
             }
             &.two{
-                @include transform(rotate(405deg));
+                transform: rotate(405deg);
                 margin-top:-1px;
                 margin-bottom:0;
             }
