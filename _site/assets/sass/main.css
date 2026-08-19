@@ -341,8 +341,6 @@ header .navbar .navbar-nav.navbar-social a {
 header .masthead {
   padding-top: 128px;
   color: #ffffff;
-  position: relative;
-  z-index: 2;
   -webkit-text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   -moz-text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   -o-text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
@@ -398,8 +396,8 @@ header .clouds img {
 }
 .section-head small {
   font-size: 1.3em;
-  color: #8f98b2;
-  font-weight: 400;
+  color: #59617c;
+  font-weight: 300;
 }
 .section-head small.inverse {
   color: #e1ebf7;
@@ -415,9 +413,6 @@ header .clouds img {
 }
 .time-items.list-inline {
   margin-left: 0;
-}
-.time-items.bottom {
-  margin-left: 40px;
 }
 .time-items .time-item h4 {
   margin-top: 3px;
@@ -444,8 +439,8 @@ header .clouds img {
   left: -6px;
 }
 .time-items .time-item.bottom {
-  margin-left: 0;
-  width: 33.333333%;
+  margin-left: 40px;
+  width: 42%;
   padding-top: 15px;
 }
 .time-items .time-item.bottom:after {
@@ -462,6 +457,9 @@ header .clouds img {
   background: #e1ebf7;
   top: -7px;
   left: -6px;
+}
+.time-items .time-item.bottom.last {
+  width: 47%;
 }
 .time-items .time-item {
   min-height: 107px;
@@ -563,7 +561,7 @@ header .clouds img {
 }
 .skills-progress .progress {
   height: 40px;
-  background-color: #acafc2;
+  background-color: #e1ebf7;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -573,23 +571,29 @@ header .clouds img {
   -moz-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none;
-  color: #ffffff;
+  color: #262e61;
   line-height: 40px;
-  text-indent: 5px;
+  text-indent: 8px;
   font-size: 1.2em;
 }
 .skills-progress .progress .progress-bar {
-  background: #f2f2f2;
+  background: #262e61;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none;
-  color: #53576f;
+  color: #ffffff;
   font-size: 1em;
   text-align: left;
-  text-indent: 55px;
+  text-indent: 20px;
   line-height: 40px;
   font-weight: 300;
+}
+.skills-progress .progress .progress-bar .pct {
+  float: right;
+  padding-right: 14px;
+  text-indent: 0;
+  opacity: 0.75;
 }
 .skills-progress span.skill {
   display: inline-block;
@@ -622,6 +626,37 @@ header .clouds img {
   background-position: 0 -336px;
 }
 
+.projects-list .media {
+  position: relative;
+  background: #ffffff;
+  background: linear-gradient(to bottom, #ffffff 0%, #edf4fa 100%);
+  -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 28px 32px;
+}
+.projects-list .media.has-link {
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .projects-list .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .projects-list .row > div {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  .projects-list .row > div .media {
+    width: 100%;
+  }
+}
 .projects-list .media-left {
   border: 1px solid #8eb2dc;
   -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
@@ -648,9 +683,9 @@ header .clouds img {
   color: #8f98b2;
 }
 .projects-list .btn-default.details-btn {
-  background: #bac8e3;
+  background: #262e61;
   color: #ffffff;
-  border: 1px solid #bac8e3;
+  border: 1px solid #262e61;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -658,9 +693,9 @@ header .clouds img {
   border-radius: 2px;
   font-size: 0.9em;
   position: absolute;
-  right: 15px;
-  bottom: 0;
-  padding: 2px 10px;
+  right: 24px;
+  bottom: 20px;
+  padding: 4px 12px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   -o-box-shadow: none;
@@ -805,7 +840,7 @@ header .clouds img {
 
 #waves {
   position: absolute;
-  top: -300px;
+  top: 50px;
   z-index: 1;
 }
 
@@ -995,8 +1030,8 @@ footer a:hover {
 }
 
 .time-items .time-item.bottom {
-  margin-left: 0;
-  width: 33.333333%;
+  margin-left: 30px;
+  width: 32%;
 }
 
 .section-dark.about-me {
